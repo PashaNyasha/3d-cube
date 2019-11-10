@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 150px auto;
+    perspective: 1000px;
+    position: relative;
+}
+
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+}
+
+.side {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    border: 5px solid rgb(94, 0, 0);
+    font: normal 25px Arial;
+    text-align: center;
+    line-height: 300px;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 0.541);
+    box-shadow: 0px 0px 50px 0px red;
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
